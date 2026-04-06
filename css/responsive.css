@@ -60,9 +60,11 @@
 
   .navbar-nav .nav-link {
     color: var(--dark) !important;
-    padding: 0.75rem 0 !important;
     width: 100%;
     border-bottom: 1px solid var(--border);
+  }
+  .offcanvas-body .nav-item{
+    width: 100%;
   }
 
   .navbar-nav .nav-link::after {

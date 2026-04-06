@@ -90,8 +90,8 @@ ul,ol{list-style:none;padding:0;margin:0}
 .navbar-toggler-icon::after{top:8px}
 .offcanvas{max-width:300px}
 .offcanvas-header{border-bottom:1px solid var(--border)}
-.offcanvas .nav-link{color:var(--dark)!important;padding:.75rem 1rem!important;border-radius:var(--radius-sm)}
-.offcanvas .nav-link:hover,.offcanvas .nav-link.active{background:rgba(var(--primary-rgb),.08);color:var(--primary)!important}
+.offcanvas .nav-link{color:var(--dark)!important; padding:.75rem 1rem!important;border-radius:0}
+.offcanvas .nav-link:hover,.offcanvas .nav-link.active{background:rgba(var(--primary-rgb),.08);color:var(--primary)!important;}
 .navbar-nav .btn-primary{background:var(--gradient-primary);border:none;font-family:var(--font-primary);font-weight:600;border-radius:var(--radius-xl);transition:var(--transition)}
 .navbar-nav .btn-primary:hover{transform:translateY(-1px);box-shadow:var(--shadow-primary)}
 
