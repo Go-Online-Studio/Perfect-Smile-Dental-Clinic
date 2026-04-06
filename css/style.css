@@ -29,8 +29,14 @@
 /* ── 2. Resets ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--font-secondary);font-size:var(--fs-body);color:var(--text);line-height:1.7;background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font-secondary);font-size:var(--fs-body);color:var(--text);line-height:1.7;background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased; overflow-x: hidden;}
 body:not(.loaded){overflow:hidden}
+section{
+   overflow: hidden;
+}
+.quick-info{
+   overflow: unset;
+}
 img{width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit;transition:var(--transition)}
 a:hover{color:var(--primary)}
