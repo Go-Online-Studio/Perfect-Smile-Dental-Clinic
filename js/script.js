@@ -87,7 +87,7 @@
             '</a>' +
             '<p class="pe-md-4">A premier dental facility dedicated to providing top-notch dental care services with a focus on excellence, comfort, and patient satisfaction.</p>' +
             '<div class="d-flex gap-3 mt-4 socialLinks">' +
-              '<a href="#" class="fs-5" aria-label="Facebook"><iconify-icon icon="mdi:facebook"></iconify-icon></a>' +
+              '<a target="_blank" href="https://www.facebook.com/Drforapatel" class="fs-5" aria-label="Facebook"><iconify-icon icon="mdi:facebook"></iconify-icon></a>' +
               '<a href="#" class="fs-5" aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>' +
             '</div>' +
           '</div>' +

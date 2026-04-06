@@ -110,7 +110,7 @@
     var navbar = document.getElementById('mainNavbar');
     var onScrollState = function () {
       if (!navbar) return;
-      navbar.classList.toggle('scrolled', window.scrollY > 118);
+      navbar.classList.toggle('scrolled', window.scrollY > 70);
     };
     window.addEventListener('scroll', onScrollState, { passive: true });
     onScrollState();
