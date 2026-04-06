@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Perfect Smile Dental Clinic | Vadodara</title>
+  <meta name="description" content="Explore our comprehensive dental services — Ceramic Crowns, Fixed Prosthodontics, Maxillofacial Prosthetics, Oral Surgery, and Root Canal Treatment at Perfect Smile Dental Clinic.">
+  <link rel="icon" href="images/Fevicon.png" type="image/png">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"></noscript>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+  <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/responsive.css"></noscript>
+</head>
+<body>
+  <div id="preloader"><div class="loader-content"><div class="shriii-loader"></div><div class="loader-text">Perfect Smile Dental Clinic</div></div></div>
+  <div class="custom-cursor"></div>
+  <header id="mainNavbar"></header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 data-aos="fade-up">Our Services</h1>
+      <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Services</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Services Grid with Isotope Filters -->
+  <section class="services-section" id="servicesGrid">
+    <div class="container">
+      <div class="section-heading" data-aos="fade-up">
+        <div class="subtitle">Our Expertise</div>
+        <h2>Comprehensive Dental <span>Services</span></h2>
+        <p>We offer a wide range of specialized dental treatments to meet all your oral health needs.</p>
+      </div>
+
+      <!-- Isotope Filter Buttons -->
+      <div class="isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="*">All Services</button>
+        <button class="filter-btn" data-filter="treatment">Treatment</button>
+        <button class="filter-btn" data-filter="surgery">Surgery</button>
+        <button class="filter-btn" data-filter="procedures">Procedures</button>
+      </div>
+
+      <!-- Grid container — populated by script.js -->
+      <div class="isotope-grid" id="serviceGridContainer" data-aos="fade-up" data-aos-delay="200">
+        <!-- Dynamically rendered by renderServiceGrid() -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>Need a <span style="color:var(--accent)">Consultation</span>?</h2>
+        <p>Contact us today to discuss your dental needs with Dr. Fora Patel.</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a href="contact.html" class="btn-primary-custom"><iconify-icon icon="mdi:calendar-check"></iconify-icon> Book Appointment</a>
+          <a href="tel:+919054841901" class="btn-outline-custom"><iconify-icon icon="mdi:phone"></iconify-icon> Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+  <button id="backToTop" aria-label="Back to top"><iconify-icon icon="mdi:chevron-up"></iconify-icon></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <script src="js/critical.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Render service cards into the grid
+      if (typeof renderServiceGrid === 'function') {
+        renderServiceGrid('#serviceGridContainer');
+      }
+
+      // Init Fancybox
+      if (typeof Fancybox !== 'undefined') {
+        Fancybox.bind('[data-fancybox]', { Toolbar: { display: { left: [], middle: [], right: ['close'] } } });
+      }
+
+      // Isotope-like filtering (CSS-based, no Isotope dependency needed)
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var gridItems = document.querySelectorAll('.service-grid-item');
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          // Update active state
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          var filter = btn.getAttribute('data-filter');
+
+          gridItems.forEach(function (item) {
+            if (filter === '*' || item.getAttribute('data-category') === filter) {
+              item.style.display = '';
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(10px)';
+              setTimeout(function () {
+                item.style.transition = 'all 0.4s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              item.style.transition = 'all 0.3s ease';
+              item.style.opacity = '0';
+              item.style.transform = 'scale(0.95)';
+              setTimeout(function () { item.style.display = 'none'; }, 300);
+            }
+          });
+        });
+      });
+
+      // If URL has a hash, scroll to the service
+      var hash = window.location.hash.replace('#', '');
+      if (hash) {
+        setTimeout(function () {
+          var el = document.getElementById(hash);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.boxShadow = '0 0 0 3px var(--primary)';
+            el.style.borderRadius = '12px';
+            setTimeout(function () { el.style.boxShadow = ''; }, 3000);
+          }
+        }, 800);
+      }
+    });
+  </script>
+</body>
+</html>

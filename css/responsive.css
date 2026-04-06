@@ -1,0 +1,321 @@
+/* ================================================
+   RESPONSIVE.CSS — Perfect Smile Dental Clinic
+   Media Queries for all breakpoints
+   ================================================ */
+
+/* ── Tablet (max-width: 991px) ── */
+@media (max-width: 991px) {
+  :root {
+    --section-py: clamp(2.5rem, 5vw, 3.5rem);
+    --brand-height: 42px;
+  }
+
+  .hero-content { max-width: 100%; }
+  .hero-content h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
+
+  .info-bar {
+    margin-top: -20px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .info-item {
+    padding: 0.5rem 0;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .process-step:not(:last-child)::after {
+    display: none;
+  }
+
+  .stats-section .row > div {
+    margin-bottom: 1rem;
+  }
+
+  /* Offcanvas takes effect */
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: var(--white);
+    z-index: 1050;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: var(--dark) !important;
+    padding: 0.75rem 0 !important;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .navbar-nav .nav-link::after {
+    display: none;
+  }
+
+  .navbar-nav .btn-primary {
+    margin-top: 1rem;
+    margin-left: 0 !important;
+  }
+
+  .dropdown-menu {
+    box-shadow: none;
+    border: 1px solid var(--border);
+    margin-top: 0 !important;
+    padding: 0.25rem 0;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  .doctor-img {
+    height: 280px;
+  }
+
+  .isotope-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* ── Mobile (max-width: 767px) ── */
+@media (max-width: 767px) {
+  :root {
+    --section-py: clamp(2rem, 4vw, 3rem);
+    --brand-height: 38px;
+  }
+
+  .hero-section .swiper-slide {
+    padding: calc(var(--nav-height) + 2rem) 0 3rem;
+  }
+
+
+  .hero-content {
+    padding: 2rem 0;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-section .swiper-pagination {
+    bottom: 15px !important;
+  }
+
+  .info-bar {
+    margin-top: 0;
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .info-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-item:last-child {
+    border-bottom: none;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .section-heading {
+    margin-bottom: 2rem;
+  }
+
+  .section-heading .subtitle::before,
+  .section-heading .subtitle::after {
+    width: 20px;
+  }
+
+  .choose-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-item img {
+    height: 160px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .page-header {
+    padding: calc(var(--nav-height) + 2rem) 0 2rem;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .cta-content h2 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer h5::after {
+    margin: 0.5rem auto 0;
+  }
+
+  .footer-links a {
+    justify-content: center;
+  }
+
+  .footer-links.contInfo a,
+  .footer-links.contInfo li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .contact-form-card {
+    padding: 1.25rem;
+  }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  .isotope-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .isotope-filters {
+    gap: 0.35rem;
+  }
+
+  .isotope-filters .filter-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  #dynamic-fabs {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .fab-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+
+  #backToTop {
+    bottom: 80px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ── Small Mobile (max-width: 575px) ── */
+@media (max-width: 575px) {
+  :root {
+    --section-py: 2rem;
+    --brand-height: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.4rem, 6vw, 1.8rem);
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 1rem;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .choose-card-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .choose-card-icon iconify-icon {
+    font-size: 1.4rem;
+  }
+
+  .process-step-number {
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
+  }
+
+  .contact-info-card {
+    padding: 1rem;
+  }
+
+  .appointment-form-wrapper {
+    padding: 1.5rem;
+  }
+
+  .about-experience-badge {
+    bottom: 10px;
+    right: 10px;
+    padding: 0.75rem 1rem;
+  }
+
+  .about-experience-badge .number {
+    font-size: 1.5rem;
+  }
+
+  .doctor-img {
+    height: 220px;
+  }
+
+  .doctor-info {
+    padding: 1.25rem;
+  }
+}

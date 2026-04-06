@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ceramicCrowns",
+    "name": "Ceramic Crowns & Bridges Fixing",
+    "category": "procedures",
+    "icon": "mdi:tooth-outline",
+    "image": "https://placehold.co/600x400/007bff/ffffff?text=Ceramic+Crowns",
+    "description": "Restore your smile with premium ceramic crowns and bridges. Our state-of-the-art solutions use high-quality materials to ensure durable and aesthetically pleasing results, restoring your smile with precision and care."
+  },
+  {
+    "id": "fixedProsthodontics",
+    "name": "Fixed Prosthodontics",
+    "category": "procedures",
+    "icon": "mdi:medical-bag",
+    "image": "https://placehold.co/600x400/0056b3/ffffff?text=Fixed+Prosthodontics",
+    "description": "Specialized in providing reliable and long-lasting dental restorations. Whether it's crowns, bridges, or dental implants, our prosthodontic treatments are tailored to each patient's unique requirements."
+  },
+  {
+    "id": "maxillofacialProsthetics",
+    "name": "Maxillofacial Prosthetics",
+    "category": "treatment",
+    "icon": "mdi:face-man-outline",
+    "image": "https://placehold.co/600x400/00c6ff/ffffff?text=Maxillofacial",
+    "description": "Expert care for creating custom prosthetic devices to address facial and oral concerns. Our team is skilled in crafting solutions that ensure optimal comfort and functionality."
+  },
+  {
+    "id": "oralSurgery",
+    "name": "Oral & Maxillofacial Surgery",
+    "category": "surgery",
+    "icon": "mdi:hospital-box-outline",
+    "image": "https://placehold.co/600x400/1a1a2e/ffffff?text=Oral+Surgery",
+    "description": "Comprehensive oral and maxillofacial surgical care delivered by experienced surgeons. From wisdom teeth extractions to corrective jaw surgery, we cover a wide spectrum of procedures."
+  },
+  {
+    "id": "rct",
+    "name": "RCT (Root Canal Treatment)",
+    "category": "treatment",
+    "icon": "mdi:needle",
+    "image": "https://placehold.co/600x400/4da3ff/ffffff?text=Root+Canal",
+    "description": "Advanced root canal treatments to save infected teeth and relieve pain. Our gentle approach and modern techniques ensure a comfortable experience and successful outcomes."
+  }
+]

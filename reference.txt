@@ -1,0 +1,401 @@
+https://max-themes.net/demos/mediz/dentist/index.html
+
+
+
+
+
+i am going to create dental clinic website named "Perfect smile dental clinic" and Dr. name is Dr. Fora Patel and for this i want you to write detailed prompt to generate good website throw Antigravity  AI -
+
+i gave you the info of her clinic in image so extract their name info like address, phone number, email, and services etc. create website in similar design as in last image reference "Mediz dental" i gave you because their logo is in similar colour and add functionality as below instructed - 
+
+1. Global CSS & Styling Constraints
+Image Handling: Set img { width: 100%; height: auto; display: block; } to ensure universal responsiveness.
+
+Typography: Set a { text-decoration: none; }, textarea{resize:non;} and use clamp() for fluid typography that scales between mobile and desktop.
+
+Brand Identity: Use a dummy placeholder for the brand logo (https://placehold.co/200x80?text=Logo).
+
+Theme Colors: Define a CSS variable system (e.g., --primary, --dark) based on the reference Website and add proper responsive spacers for padding and margins too.
+
+2. Required Component Functionality
+Non-Shrinking Banner: The Hero Swiper must use min-height: calc(100vh - var(--nav-height)) and height: auto. The content within the banner must never shrink below its own height on mobile; it must expand the container vertically to prevent text cut-off.
+
+
+--nav-height: max(65px, calc(var(--brand-height) + 16px));
+.navbar-brand{
+            height: var(--brand-height);
+            padding: 0;
+        }
+        .navbar-brand img{
+            height: 100%;
+            width: auto;
+        }
+
+Themed Swiper Pagination: Custom style the Swiper pagination dots to match the --primary color. Active dots should be elongated (pill-shaped) with 100% opacity.
+
+Navigation: Implement a Bootstrap Offcanvas navbar for mobile, with a background transition effect on scroll. and in services menu there will be dropdown so remember this 
+
+Image Gallery: Integrate Fancybox for all menu or service images to allow elegant full-screen viewing.
+
+Interactive Services: Use Isotope to create a filtered grid system for service categories.
+
+Iconography: Use Iconify for all UI accents and process steps.
+
+3. Messaging & Form Logic
+WhatsApp Integration: Create a form with Bootstrap validation (needs-validation).
+
+Dynamic Messaging: Write a JavaScript handler that captures form inputs and opens a WhatsApp API link (https://api.whatsapp.com/send?phone=...) with a formatted, pre-filled message.
+
+Quick Actions: Add "Enquiry for [service name]`" buttons on service cards that trigger a direct WhatsApp message for that specific item.
+
+Swiper Services: use swiper for services cards and make it modern.
+
+Testimonials: A Swiper carousel with customer reviews.
+
+Contact/WhatsApp:  Utilize Bootstrap's UI components for form validation, including warnings and notifications for user inputs. and use proper responsive link according to device mobile, desktop and add debounce and resize for proper responsive link of whtsapp but you can change the layout design of for website but not functionality 
+
+## ⚙️ Core Functionality
+
+### 📦 JSON-Based Services System
+
+Store:
+
+* Service name
+* Images
+* Description
+
+Render dynamically:
+
+* Services listing
+* Service detail pages
+
+5. Responsive Design & Performance
+Use max-width media queries (e.g., 991px, 767px, 575px) to adjust section padding and absolute-positioned elements. Use proper responsive section spacers and margin padding.
+
+Initialize AOS (Animate On Scroll) with once: true and duration: 800 for performance-friendly animations.
+
+
+
+code refernces -
+
+critical js -
+
+/* ========================================
+   CRITICAL.JS - Header Injection
+   ======================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+
+  // 1. Inject Topbar & Navbar
+  const headerEl = document.getElementById("mainNavbar");
+  if (headerEl) {
+    headerEl.innerHTML = `
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/DrPashmin_s_WellnessClinicLogo.webp" alt="Dr. Pashmin's Wellness Clinic">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="skin-laser.html">Skin & Laser</a></li>
+                  <li><a class="dropdown-item" href="hair-restoration.html">Hair Restoration</a></li>
+                  <li><a class="dropdown-item" href="weight-management.html">Weight Management</a></li>
+                  <li><a class="dropdown-item" href="ayurvedic-therapies.html">Ayurveda</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item ms-lg-3">
+                <a href="contact.html" class="btn btn-primary btn-sm px-4 py-2">Book Appointment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    `;
+
+    // 2. Automatically set the "active" class based on current page URL
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = headerEl.querySelectorAll(".navbar-nav .nav-link");
+    
+    navLinks.forEach((link) => {
+      const linkHref = link.getAttribute("href");
+      if (linkHref && linkHref.split("?")[0] === currentPage) {
+        link.classList.add("active");
+      }
+    });
+
+    // ===== NAVBAR SCROLL BEHAVIOR =====
+  const navbar = document.getElementById("mainNavbar");
+  const onScrollState = () => {
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 118);
+  };
+  window.addEventListener("scroll", onScrollState, { passive: true });
+  onScrollState();
+  }
+});
+
+script.js-
+
+/* ========================================
+   SCRIPT.JS - Footer & Interactivity
+   ======================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+
+  // ===== CONFIGURATION =====
+  const CONFIG = {
+    whatsappNumber: "918347345777", // Clinic WhatsApp
+    callNumber: "+918347345777",    // Clinic Phone
+    animationDuration: 800,
+  };
+  window.CLINIC_CONFIG = CONFIG;
+
+  // ===== INJECT FOOTER =====
+  const footerEl = document.getElementById("footer");
+  if (footerEl) {
+    // Ensure the container has the .footer class for styling
+    footerEl.classList.add("footer"); 
+    footerEl.innerHTML = `
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <a class="footer-brand" href="index.html">
+              <img loading="lazy" src="images/DrPashmin_s_WellnessClinicLogo.webp" alt="DrPashmin_s_WellnessClinicLogo">
+            </a>
+            <p class="text-muted pe-md-4">A holistic wellness and aesthetic center dedicated to delivering medically supervised, result-oriented treatments.</p>
+            <div class="d-flex gap-3 mt-4 socialLinks">
+              <a href="#" class="fs-5"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+              <a href="#" class="fs-5"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-col">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Clinic</a></li>
+              <li><a href="skin-laser.html">Skin & Laser</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-col">
+            <h5>Our Services</h5>
+            <ul class="footer-links">
+              <li><a href="weight-management.html">Weight Management</a></li>
+              <li><a href="skin-laser.html">Skin & Laser</a></li>
+              <li><a href="hair-restoration.html">Hair Restoration</a></li>
+              <li><a href="ayurvedic-therapies.html">Ayurvedic Therapies</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-col">
+            <h5>Contact Info</h5>
+            <ul class="footer-links contInfo">
+              <li class="d-flex align-items-start gap-2 text-muted">
+                <a class="locationLink d-flex align-items-start gap-2" target="_blank" href="https://maps.app.goo.gl/ZkmAzXqSYsJa7pDb8">
+                  <iconify-icon icon="mdi:map-marker" class="text-primary mt-1 flex-shrink-0"></iconify-icon>
+                  Earth Artica, 22/ GF, Vasna Bhayli Link Rd, Ashwamegh Nagar, Tandalja, Vadodara, Gujarat 390007
+                </a>
+              </li>
+              <li class="d-flex align-items-center  gap-2 text-muted mt-3">
+                <a href="tel:+918347345777" class="d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+                  <iconify-icon icon="mdi:phone" class="text-primary"></iconify-icon> +91 83473 45777
+                </a> 
+              </li>
+              <li class="d-flex align-items-center gap-2 text-muted mt-2">
+                <a href="mailto:https://drpashminwellnessclinic.com" class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                  <iconify-icon icon="mdi:web" class="text-primary"></iconify-icon> drpashminwellnessclinic.com
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom text-center text-muted mt-5">
+          &copy; <span id="year"></span> Dr. Pashmin's Wellness Clinic. All Rights Reserved.
+        </div>
+      </div>
+    `;
+  }
+
+  // WhatsApp URL Adjuster (Device-based Detection)
+(function () {
+  const mobileLink = `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}`;
+  const desktopLink = `https://web.whatsapp.com/send?phone=${CONFIG.whatsappNumber}`;
+
+  function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  function updateWhatsAppLink() {
+    const isMobile = isMobileDevice();
+    const targetLink = isMobile ? mobileLink : desktopLink;
+
+    document.querySelectorAll(".set-url-target").forEach(el => {
+      el.setAttribute("href", targetLink);
+    });
+  }
+
+  window.addEventListener("resize", updateWhatsAppLink);
+  window.addEventListener("load", updateWhatsAppLink);
+})();
+
+  // ===== DYNAMIC YEAR =====
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ===== INJECT FAB BUTTONS (WhatsApp & Call) =====
+  const injectFABs = () => {
+    if (document.getElementById("dynamic-fabs")) return;
+
+    const fabContainer = document.createElement("div");
+    fabContainer.id = "dynamic-fabs";
+
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const whatsappUrl = isMobile 
+      ? `https://api.whatsapp.com/send?phone=${CONFIG.whatsappNumber}`
+      : `https://web.whatsapp.com/send?phone=${CONFIG.whatsappNumber}`;
+
+    fabContainer.innerHTML = `
+      <a href="tel:${CONFIG.callNumber}" class="fab-btn fab-call" rel="noopener" aria-label="Call us">
+        <iconify-icon icon="mdi:phone"></iconify-icon>
+      </a>
+      <a href="${whatsappUrl}" class="fab-btn fab-whatsapp" rel="noopener" target="_blank" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="29.77" height="30" viewBox="0 0 256 258"><defs><linearGradient id="SVGBRLHCcSy" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#1faf38"/><stop offset="100%" stop-color="#60d669"/></linearGradient><linearGradient id="SVGHW6lecxh" x1="50%" x2="50%" y1="100%" y2="0%"><stop offset="0%" stop-color="#f9f9f9"/><stop offset="100%" stop-color="#fff"/></linearGradient></defs><path fill="url(#SVGBRLHCcSy)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/><path fill="url(#SVGHW6lecxh)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/><path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/></svg>
+      </a>
+    `;
+    document.body.appendChild(fabContainer);
+  };
+  injectFABs();
+
+ // ── 1 & 2. AOS & Counter Initialization ──
+  function easeOutQuad(t) { return t * (2 - t); }
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 2000;
+    var start = performance.now();
+
+    function update(now) {
+      var elapsed = now - start;
+      var progress = Math.min(elapsed / duration, 1);
+      var value = Math.floor(easeOutQuad(progress) * target);
+      el.textContent = value + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+  var counterObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  function initAnimations() {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({ once: true, duration: 800, offset: 60, easing: 'ease-out-cubic' });
+      setTimeout(function () { AOS.refresh(); }, 200);
+    }
+    document.querySelectorAll('.stat-counter').forEach(function (el) {
+      counterObserver.observe(el);
+    });
+  }
+
+  // Start animations only after preloader is successfully dismissed
+  if (document.body.classList.contains('loaded')) {
+    initAnimations();
+  } else {
+    document.addEventListener('loaderDismissed', initAnimations);
+  }
+
+  // ── 3. Debounced Resize ──
+  function debounce(fn, wait) {
+    var timer;
+    return function () {
+      clearTimeout(timer);
+      timer = setTimeout(fn, wait);
+    };
+  }
+
+  window.addEventListener('resize', debounce(function () {
+    if (typeof AOS !== 'undefined') AOS.refresh();
+  }, 250));
+
+  // ── 4. Back to Top ──
+  var backBtn = document.getElementById('backToTop');
+  if (backBtn) {
+    window.addEventListener('scroll', function () {
+      backBtn.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+    backBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ── 5. Custom Cursor (desktop only) ──
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var cursor = document.querySelector('.custom-cursor');
+    if (cursor) {
+      document.addEventListener('mousemove', function (e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        if (!cursor.classList.contains('active')) cursor.classList.add('active');
+      });
+
+      document.addEventListener('mouseover', function (e) {
+        if (e.target.closest('a, button, .btn, input, select, textarea, label')) {
+          cursor.classList.add('hovered');
+        }
+      });
+      document.addEventListener('mouseout', function (e) {
+        if (e.target.closest('a, button, .btn, input, select, textarea, label')) {
+          cursor.classList.remove('hovered');
+        }
+      });
+    }
+  }
+});
+
+add below html in every page and also add no script info 
+
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="preload" as="style" href="css/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'">
+
+<div id="preloader">
+    <div class="loader-content">
+      <div class="shriii-loader"></div>
+      <div class="loader-text">Shriii Tracking Solution</div>
+    </div>
+  </div>
+  
+  <div class="custom-cursor"></div>
+
+add automated sitemap generation throw github action
+
+## 🎯 Final Goal
+
+Build a **premium, fast, scalable frontend website** that:
+
+* Uses JSON as a CMS
+* Dynamically renders services
+* Follows a **luxury wellness aesthetic**
+* Maintains **perfect color balance (60-30-10 rule)**
+* Matches modern UI/UX standards
