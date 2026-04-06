@@ -41,7 +41,7 @@
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide">
-          <div class="hero-slide-bg" style="background-image:url('https://placehold.co/1920x900/007bff/ffffff?text=Perfect+Smile')"></div>
+          <div class="hero-slide-bg hero-slide-bg1" style="background-image:url('images/Banner1.webp')"></div>
           <div class="container">
             <div class="hero-content" data-aos="fade-up">
               <div class="hero-badge">
@@ -62,7 +62,7 @@
         </div>
         <!-- Slide 2 -->
         <div class="swiper-slide">
-          <div class="hero-slide-bg" style="background-image:url('https://placehold.co/1920x900/0056b3/ffffff?text=Expert+Care')"></div>
+          <div class="hero-slide-bg hero-slide-bg2" style="background-image:url('images/Banner2.webp')"></div>
           <div class="container">
             <div class="hero-content" data-aos="fade-up">
               <div class="hero-badge">
@@ -83,7 +83,7 @@
         </div>
         <!-- Slide 3 -->
         <div class="swiper-slide">
-          <div class="hero-slide-bg" style="background-image:url('https://placehold.co/1920x900/00c6ff/ffffff?text=Gentle+Care')"></div>
+          <div class="hero-slide-bg hero-slide-bg3" style="background-image:url('images/Banner3.webp')"></div>
           <div class="container">
             <div class="hero-content" data-aos="fade-up">
               <div class="hero-badge">
@@ -309,49 +309,49 @@
       </div>
       <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/007bff/fff?text=Clinic+Interior+1" data-fancybox="gallery" data-caption="Clinic Interior">
+          <a href="images/GalleryImages1.avif" data-fancybox="gallery" data-caption="Clinic Interior">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/007bff/fff?text=Interior+1" alt="Clinic Interior" loading="lazy">
+              <img src="images/GalleryImages1.avif" alt="Clinic Interior" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
         </div>
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/0056b3/fff?text=Treatment+Room" data-fancybox="gallery" data-caption="Treatment Room">
+          <a href="images/GalleryImages2.avif" data-fancybox="gallery" data-caption="Treatment Room">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/0056b3/fff?text=Treatment+Room" alt="Treatment Room" loading="lazy">
+              <img src="images/GalleryImages2.avif" alt="Treatment Room" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
         </div>
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/00c6ff/fff?text=Reception" data-fancybox="gallery" data-caption="Reception Area">
+          <a href="images/GalleryImages3.avif" data-fancybox="gallery" data-caption="Reception Area">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/00c6ff/fff?text=Reception" alt="Reception" loading="lazy">
+              <img src="images/GalleryImages3.avif" alt="Reception" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
         </div>
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/4da3ff/fff?text=Equipment" data-fancybox="gallery" data-caption="Modern Equipment">
+          <a href="images/GalleryImages4.avif" data-fancybox="gallery" data-caption="Modern Equipment">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/4da3ff/fff?text=Equipment" alt="Equipment" loading="lazy">
+              <img src="images/GalleryImages4.avif" alt="Equipment" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
         </div>
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/1a1a2e/fff?text=Waiting+Area" data-fancybox="gallery" data-caption="Waiting Area">
+          <a href="images/GalleryImages5.avif" data-fancybox="gallery" data-caption="Waiting Area">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/1a1a2e/fff?text=Waiting+Area" alt="Waiting Area" loading="lazy">
+              <img src="images/GalleryImages5.avif" alt="Waiting Area" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
         </div>
         <div class="col-md-4 col-6">
-          <a href="https://placehold.co/800x600/16213e/fff?text=Building" data-fancybox="gallery" data-caption="Nexus Connecting Hub">
+          <a href="images/GalleryImages6.avif" data-fancybox="gallery" data-caption="Nexus Connecting Hub">
             <div class="gallery-item">
-              <img src="https://placehold.co/400x300/16213e/fff?text=Building" alt="Nexus Building" loading="lazy">
+              <img src="images/GalleryImages6.avif" alt="Nexus Building" loading="lazy">
               <div class="gallery-overlay"><iconify-icon icon="mdi:magnify-plus-outline"></iconify-icon></div>
             </div>
           </a>
@@ -506,7 +506,7 @@
 
       // Init Fancybox
       if (typeof Fancybox !== 'undefined') {
-        Fancybox.bind('[data-fancybox]', { Toolbar: { display: { left: [], middle: [], right: ['close'] } } });
+        Fancybox.bind('[data-fancybox]', { Toolbar: { display: { left: ["infobar"], middle: [], right: ["zoom", "slideshow", "fullscreen", "download", "close"] } } });
       }
     });
   </script>

@@ -24,7 +24,7 @@
       name: 'Ceramic Crowns & Bridges Fixing',
       category: 'procedures',
       icon: 'mdi:tooth-outline',
-      image: 'https://placehold.co/600x400/007bff/ffffff?text=Ceramic+Crowns',
+      image: 'images/CeramicCrownsAndBridgesFixing.webp',
       description: 'Restore your smile with premium ceramic crowns and bridges. Our state-of-the-art solutions use high-quality materials to ensure durable and aesthetically pleasing results, restoring your smile with precision and care.'
     },
     {
@@ -32,7 +32,7 @@
       name: 'Fixed Prosthodontics',
       category: 'procedures',
       icon: 'mdi:medical-bag',
-      image: 'https://placehold.co/600x400/0056b3/ffffff?text=Fixed+Prosthodontics',
+      image: 'images/FixedProsthodontics.webp',
       description: 'Specialized in providing reliable and long-lasting dental restorations. Whether it\'s crowns, bridges, or dental implants, our prosthodontic treatments are tailored to each patient\'s unique requirements.'
     },
     {
@@ -40,7 +40,7 @@
       name: 'Maxillofacial Prosthetics',
       category: 'treatment',
       icon: 'mdi:face-man-outline',
-      image: 'https://placehold.co/600x400/00c6ff/ffffff?text=Maxillofacial',
+      image: 'images/MaxillofacialProsthetics.webp',
       description: 'Expert care for creating custom prosthetic devices to address facial and oral concerns. Our team is skilled in crafting solutions that ensure optimal comfort and functionality.'
     },
     {
@@ -48,7 +48,7 @@
       name: 'Oral & Maxillofacial Surgery',
       category: 'surgery',
       icon: 'mdi:hospital-box-outline',
-      image: 'https://placehold.co/600x400/1a1a2e/ffffff?text=Oral+Surgery',
+      image: 'images/OralAndMaxillofacialSurgery.webp',
       description: 'Comprehensive oral and maxillofacial surgical care delivered by experienced surgeons. From wisdom teeth extractions to corrective jaw surgery, we cover a wide spectrum of procedures.'
     },
     {
@@ -56,7 +56,7 @@
       name: 'RCT (Root Canal Treatment)',
       category: 'treatment',
       icon: 'mdi:needle',
-      image: 'https://placehold.co/600x400/4da3ff/ffffff?text=Root+Canal',
+      image: 'images/RCT(RootCanalTreatment).webp',
       description: 'Advanced root canal treatments to save infected teeth and relieve pain. Our gentle approach and modern techniques ensure a comfortable experience and successful outcomes.'
     }
   ];
@@ -85,7 +85,7 @@
             '<a class="footer-brand" href="index.html">' +
               '<img height="42px" width="128.06px" src="images/BrandLogo.webp" alt="Perfect Smile Dental Clinic | Dr. Fora Patel">' +
             '</a>' +
-            '<p class="text-muted pe-md-4">A premier dental facility dedicated to providing top-notch dental care services with a focus on excellence, comfort, and patient satisfaction.</p>' +
+            '<p class="pe-md-4">A premier dental facility dedicated to providing top-notch dental care services with a focus on excellence, comfort, and patient satisfaction.</p>' +
             '<div class="d-flex gap-3 mt-4 socialLinks">' +
               '<a href="#" class="fs-5" aria-label="Facebook"><iconify-icon icon="mdi:facebook"></iconify-icon></a>' +
               '<a href="#" class="fs-5" aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>' +
@@ -112,18 +112,18 @@
           '<div class="col-lg-3 col-md-6 footer-col">' +
             '<h5>Contact Info</h5>' +
             '<ul class="footer-links contInfo">' +
-              '<li class="d-flex align-items-start gap-2 text-muted">' +
+              '<li class="d-flex align-items-start gap-2">' +
                 '<a class="locationLink d-flex align-items-start gap-2" target="_blank" href="https://maps.google.com/?q=Perfect+Smile+Dental+Clinic+Vadodara">' +
                   '<iconify-icon icon="mdi:map-marker" class="text-primary mt-1 flex-shrink-0"></iconify-icon>' +
                   '410, 411, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara - 390007' +
                 '</a>' +
               '</li>' +
-              '<li class="d-flex align-items-center gap-2 text-muted mt-3">' +
+              '<li class="d-flex align-items-center gap-2 mt-3">' +
                 '<a href="tel:+919054841901" class="d-flex align-items-center gap-2">' +
                   '<iconify-icon icon="mdi:phone" class="text-primary"></iconify-icon> +91 90548 41901' +
                 '</a>' +
               '</li>' +
-              '<li class="d-flex align-items-center gap-2 text-muted mt-2">' +
+              '<li class="d-flex align-items-center gap-2 mt-2">' +
                 '<a href="mailto:forapatel27@gmail.com" class="d-flex align-items-center gap-2">' +
                   '<iconify-icon icon="mdi:email" class="text-primary"></iconify-icon> forapatel27@gmail.com' +
                 '</a>' +
@@ -131,7 +131,7 @@
             '</ul>' +
           '</div>' +
         '</div>' +
-        '<div class="footer-bottom text-center text-muted mt-5">' +
+        '<div class="footer-bottom text-center mt-5">' +
           '&copy; <span id="year"></span> Perfect Smile Dental Clinic. All Rights Reserved.' +
         '</div>' +
       '</div>';

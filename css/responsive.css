@@ -319,3 +319,16 @@
     padding: 1.25rem;
   }
 }
+
+
+@media (max-width: 439px) {
+  .hero-slide-bg1{
+  background: url('../images/BannerMob1.webp') center/cover no-repeat !important;
+} 
+  .hero-slide-bg2{
+  background: url('../images/BannerMob2.webp') center/cover no-repeat !important;
+} 
+  .hero-slide-bg3{
+  background: url('../images/BannerMob3.webp') center/cover no-repeat !important;
+} 
+}
