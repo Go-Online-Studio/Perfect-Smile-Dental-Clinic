@@ -107,6 +107,62 @@
       icon: 'mdi:baby-face-outline',
       image: 'images/PediatricDentistry.webp',
       description: 'Gentle and friendly dental care specialized for children, ensuring a positive dental experience and healthy smiles for life.'
+    },
+    {
+      id: 'smileDesigning',
+      name: 'Smile Designing',
+      category: 'procedures',
+      icon: 'mdi:emoticon-outline',
+      image: 'images/SmileDesigning.webp',
+      description: 'Transform your smile with custom smile designing procedures tailored to enhance the aesthetics of your teeth and overall facial harmony.'
+    },
+    {
+      id: 'dentalVeneers',
+      name: 'Dental Veneers / Laminates',
+      category: 'procedures',
+      icon: 'mdi:tooth',
+      image: 'images/DentalVeneers.webp',
+      description: 'Enhance your teeth\'s appearance with ultra-thin, custom-made porcelain veneers that cover the front surface of teeth to improve their color, shape, and size.'
+    },
+    {
+      id: 'wisdomToothRemoval',
+      name: 'Wisdom Tooth Removal',
+      category: 'surgery',
+      icon: 'mdi:tooth-outline',
+      image: 'images/WisdomToothRemoval.webp',
+      description: 'Safe and painless extraction of troublesome wisdom teeth performed by experienced surgeons to prevent pain, infection, and damage to adjacent teeth.'
+    },
+    {
+      id: 'toothExtraction',
+      name: 'Tooth Extraction',
+      category: 'surgery',
+      icon: 'mdi:tooth',
+      image: 'images/ToothExtraction.webp',
+      description: 'Professional and gentle tooth extraction services for severely decayed, damaged, or problematic teeth ensuring a comfortable and smooth recovery.'
+    },
+    {
+      id: 'gumTreatment',
+      name: 'Gum Treatment (Periodontics)',
+      category: 'treatment',
+      icon: 'mdi:bacteria-outline',
+      image: 'images/GumTreatment-Periodontics.webp',
+      description: 'Comprehensive periodontal care to treat gum disease, restore healthy gums, and prevent tooth loss, ensuring optimal oral health.'
+    },
+    {
+      id: 'fullMouthRehab',
+      name: 'Full Mouth Rehabilitation',
+      category: 'treatment',
+      icon: 'mdi:face-recognition',
+      image: 'images/FullMouthRehabilitation.webp',
+      description: 'Comprehensive rehabilitation of your entire mouth bringing together multiple dental treatments to restore full function, health, and a beautiful smile.'
+    },
+    {
+      id: 'dentalFillings',
+      name: 'Dental Fillings',
+      category: 'treatment',
+      icon: 'mdi:tooth-outline',
+      image: 'images/DentalFillings.webp',
+      description: 'Restore decayed or damaged teeth with durable and tooth-colored fillings that blend seamlessly with your natural teeth.'
     }
   ];
 
@@ -165,7 +221,7 @@
               '<li class="d-flex align-items-start gap-2">' +
                 '<a class="locationLink d-flex align-items-start gap-2" target="_blank" href="https://maps.google.com/?q=Perfect+Smile+Dental+Clinic+Vadodara">' +
                   '<iconify-icon icon="mdi:map-marker" class="text-primary mt-1 flex-shrink-0"></iconify-icon>' +
-                  '410, 411, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara - 390007' +
+                  '410, 411, 4th Floor, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara - 390007' +
                 '</a>' +
               '</li>' +
               '<li class="d-flex align-items-center gap-2 mt-3">' +

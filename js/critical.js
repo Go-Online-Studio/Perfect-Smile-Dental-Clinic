@@ -54,6 +54,13 @@
                   '<li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>' +
                   '<li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>' +
                   '<li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#smileDesigning">Smile Designing</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#dentalVeneers">Dental Veneers / Laminates</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#wisdomToothRemoval">Wisdom Tooth Removal</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#toothExtraction">Tooth Extraction</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#gumTreatment">Gum Treatment (Periodontics)</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#fullMouthRehab">Full Mouth Rehabilitation</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#dentalFillings">Dental Fillings</a></li>' +
                 '</ul>' +
               '</li>' +
               '<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>' +
@@ -89,6 +96,13 @@
                     '<li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>' +
                     '<li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>' +
                     '<li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#smileDesigning">Smile Designing</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#dentalVeneers">Dental Veneers / Laminates</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#wisdomToothRemoval">Wisdom Tooth Removal</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#toothExtraction">Tooth Extraction</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#gumTreatment">Gum Treatment (Periodontics)</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#fullMouthRehab">Full Mouth Rehabilitation</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#dentalFillings">Dental Fillings</a></li>' +
                   '</ul>' +
                 '</li>' +
                 '<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>' +

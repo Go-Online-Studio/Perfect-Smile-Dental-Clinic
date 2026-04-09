@@ -7,11 +7,11 @@
 @media (max-width: 991px) {
   :root {
     --section-py: clamp(2.5rem, 5vw, 3.5rem);
-    --brand-height: 42px;
+    --brand-height: 48px;
   }
 
   .hero-content { max-width: 100%; }
-  .hero-content h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
+  .hero-content h1,.hero-content .h1 { font-size: clamp(1.6rem, 4vw, 2.5rem); }
 
   .info-bar {
     margin-top: -20px;
@@ -104,7 +104,7 @@
 @media (max-width: 767px) {
   :root {
     --section-py: clamp(2rem, 4vw, 3rem);
-    --brand-height: 38px;
+    --brand-height: 44px;
   }
 
   .hero-section .swiper-slide {
@@ -255,10 +255,10 @@
 @media (max-width: 575px) {
   :root {
     --section-py: 2rem;
-    --brand-height: 35px;
-  }
+    --brand-height: 44px;
+  } 
 
-  .hero-content h1 {
+  .hero-content h1,.hero-content .h1 {
     font-size: clamp(1.4rem, 6vw, 1.8rem);
   }
 

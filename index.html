@@ -22,6 +22,21 @@
   <link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="css/responsive.css"></noscript>
   <link rel="canonical" href="https://go-online-studio.github.io/Perfect-Smile-Dental-Clinic/index.html">
+  <style>
+    /* ── 3. Preloader ── */
+    #preloader{position:fixed;inset:0;z-index:99999;background:var(--white);display:flex;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
+    .loaded #preloader{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-content{text-align:center}
+    .shriii-loader{width:50px;height:50px;border:4px solid var(--surface-alt);border-top:4px solid var(--primary);border-radius:50%;margin:0 auto 1rem;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .loader-text{font-family:var(--font-primary);font-size:var(--fs-h4);font-weight:600;color:var(--primary);letter-spacing:.5px}
+
+    /* ── 4. Custom Cursor ── */
+    .custom-cursor{width:20px;height:20px;border:2px solid var(--primary);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s,opacity .2s;opacity:0;mix-blend-mode:difference}
+    .custom-cursor.active{opacity:1}
+    .custom-cursor.hovered{width:40px;height:40px;background:rgba(var(--primary-rgb),.15);border-color:var(--primary-light)}
+    @media(hover:none){.custom-cursor{display:none!important}} 
+  </style>
 </head>
 <body>
 
@@ -63,6 +78,13 @@
             <li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>
             <li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>
             <li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>
+            <li><a class="dropdown-item" href="services.html#smileDesigning">Smile Designing</a></li>
+            <li><a class="dropdown-item" href="services.html#dentalVeneers">Dental Veneers / Laminates</a></li>
+            <li><a class="dropdown-item" href="services.html#wisdomToothRemoval">Wisdom Tooth Removal</a></li>
+            <li><a class="dropdown-item" href="services.html#toothExtraction">Tooth Extraction</a></li>
+            <li><a class="dropdown-item" href="services.html#gumTreatment">Gum Treatment (Periodontics)</a></li>
+            <li><a class="dropdown-item" href="services.html#fullMouthRehab">Full Mouth Rehabilitation</a></li>
+            <li><a class="dropdown-item" href="services.html#dentalFillings">Dental Fillings</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -98,6 +120,13 @@
               <li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>
               <li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>
               <li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>
+              <li><a class="dropdown-item" href="services.html#smileDesigning">Smile Designing</a></li>
+              <li><a class="dropdown-item" href="services.html#dentalVeneers">Dental Veneers / Laminates</a></li>
+              <li><a class="dropdown-item" href="services.html#wisdomToothRemoval">Wisdom Tooth Removal</a></li>
+              <li><a class="dropdown-item" href="services.html#toothExtraction">Tooth Extraction</a></li>
+              <li><a class="dropdown-item" href="services.html#gumTreatment">Gum Treatment (Periodontics)</a></li>
+              <li><a class="dropdown-item" href="services.html#fullMouthRehab">Full Mouth Rehabilitation</a></li>
+              <li><a class="dropdown-item" href="services.html#dentalFillings">Dental Fillings</a></li>
             </ul>
           </li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -147,7 +176,7 @@
               <div class="hero-badge">
                 <iconify-icon icon="mdi:shield-check"></iconify-icon> Trusted Expertise
               </div>
-              <h1>Advanced Dental <span>Treatments</span> You Can Trust</h1>
+              <h2 class="h1">The <span>Most Affordable</span> Dental Clinic</h2>  
               <p>From ceramic crowns and bridges to root canal treatments, we offer comprehensive dental solutions using the latest techniques and technology.</p>
               <div class="hero-btns">
                 <a href="services.html" class="btn-primary-custom">
@@ -168,7 +197,7 @@
               <div class="hero-badge">
                 <iconify-icon icon="mdi:heart-pulse"></iconify-icon> Gentle & Caring
               </div>
-              <h1>Dr. Fora Patel — <span>Dental Surgeon</span> (B.D.S.)</h1>
+              <h2 class="h1">Dr. Fora Patel — <span>Dental Surgeon</span> (B.D.S.)</h2>
               <p>With years of experience and a patient-first approach, Dr. Fora Patel delivers personalized dental care that puts your comfort and health first.</p>
               <div class="hero-btns">
                 <a href="about.html" class="btn-primary-custom">
@@ -206,7 +235,7 @@
             <div class="info-icon"><iconify-icon icon="mdi:clock-outline"></iconify-icon></div>
             <div>
               <h6>Clinic Hours</h6>
-              <p>Mon-Sat: 10am–1pm, 5pm–8pm</p>
+              <p>Mon-Sat: 10am–1pm, 4:30pm–7:30pm</p>  
             </div>
           </div>
         </div>
@@ -559,7 +588,7 @@
         <li class="d-flex align-items-start gap-2">
           <a class="locationLink d-flex align-items-start gap-2" target="_blank" href="https://maps.google.com/?q=Perfect+Smile+Dental+Clinic+Vadodara">
             <iconify-icon icon="mdi:map-marker" class="text-primary mt-1 flex-shrink-0"></iconify-icon>
-            410, 411, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara - 390007
+            410, 411, 4th Floor, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara - 390007
           </a>
         </li>
         <li class="d-flex align-items-center gap-2 mt-3">
