@@ -48,6 +48,12 @@
                   '<li><a class="dropdown-item" href="services.html#maxillofacialProsthetics">Maxillofacial Prosthetics</a></li>' +
                   '<li><a class="dropdown-item" href="services.html#oralSurgery">Oral & Maxillofacial Surgery</a></li>' +
                   '<li><a class="dropdown-item" href="services.html#rct">RCT (Root Canal)</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#dentalTreatments">Dental Treatments</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#dentalImplants">Dental Implants</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#preventiveDentistry">Preventive Dentistry</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>' +
+                  '<li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>' +
                 '</ul>' +
               '</li>' +
               '<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>' +
@@ -77,6 +83,12 @@
                     '<li><a class="dropdown-item" href="services.html#maxillofacialProsthetics">Maxillofacial Prosthetics</a></li>' +
                     '<li><a class="dropdown-item" href="services.html#oralSurgery">Oral & Maxillofacial Surgery</a></li>' +
                     '<li><a class="dropdown-item" href="services.html#rct">RCT (Root Canal)</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#dentalTreatments">Dental Treatments</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#dentalImplants">Dental Implants</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#preventiveDentistry">Preventive Dentistry</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#bracesAligners">Braces / Aligners</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#teethWhitening">Teeth Whitening</a></li>' +
+                    '<li><a class="dropdown-item" href="services.html#pediatricDentistry">Pediatric Dentistry</a></li>' +
                   '</ul>' +
                 '</li>' +
                 '<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>' +

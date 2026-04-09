@@ -11,7 +11,8 @@
   var CONFIG = {
     whatsappNumber: '919054841901',
     callNumber: '+919054841901',
-    animationDuration: 800
+    animationDuration: 800,
+    experienceBaseYear: 2013
   };
   window.CLINIC_CONFIG = CONFIG;
 
@@ -58,8 +59,57 @@
       icon: 'mdi:needle',
       image: 'images/RCT(RootCanalTreatment).webp',
       description: 'Advanced root canal treatments to save infected teeth and relieve pain. Our gentle approach and modern techniques ensure a comfortable experience and successful outcomes.'
+    },
+    {
+      id: 'dentalTreatments',
+      name: 'Dental Treatments',
+      category: 'treatment',
+      icon: 'mdi:tooth-cog',
+      image: 'https://placehold.co/600x400/00d2ff/ffffff?text=Dental+Treatments',
+      description: 'Comprehensive dental treatments for all your oral health needs, from routine check-ups to advanced care.'
+    },
+    {
+      id: 'dentalImplants',
+      name: 'Dental Implants',
+      category: 'surgery',
+      icon: 'mdi:tooth-plus',
+      image: 'https://placehold.co/600x400/00b4d8/ffffff?text=Dental+Implants',
+      description: 'Modern and durable dental implants to restore missing teeth and improve your overall dental function and aesthetics.'
+    },
+    {
+      id: 'preventiveDentistry',
+      name: 'Preventive Dentistry',
+      category: 'procedures',
+      icon: 'mdi:shield-plus-outline',
+      image: 'https://placehold.co/600x400/06d6a0/ffffff?text=Preventive+Dentistry',
+      description: 'Maintain a healthy smile with our preventive dental care services, including cleanings, exams, and protective treatments.'
+    },
+    {
+      id: 'bracesAligners',
+      name: 'Braces / Aligners',
+      category: 'procedures',
+      icon: 'mdi:tooth-outline',
+      image: 'https://placehold.co/600x400/ef476f/ffffff?text=Braces+Aligners',
+      description: 'Expert orthodontic solutions including traditional braces and modern clear aligners to straighten your teeth and enhance your smile.'
+    },
+    {
+      id: 'teethWhitening',
+      name: 'Teeth Whitening',
+      category: 'procedures',
+      icon: 'mdi:sparkles',
+      image: 'https://placehold.co/600x400/ffd166/ffffff?text=Teeth+Whitening',
+      description: 'Professional teeth whitening treatments to brighten your smile and remove tough stains effectively and safely.'
+    },
+    {
+      id: 'pediatricDentistry',
+      name: 'Pediatric Dentistry',
+      category: 'treatment',
+      icon: 'mdi:baby-face-outline',
+      image: 'https://placehold.co/600x400/118ab2/ffffff?text=Pediatric+Dentistry',
+      description: 'Gentle and friendly dental care specialized for children, ensuring a positive dental experience and healthy smiles for life.'
     }
   ];
+
 
   // ══════════════════════════════════════════════
   // 3. UTILITY: Debounce
@@ -88,7 +138,7 @@
             '<p class="pe-md-4">A premier dental facility dedicated to providing top-notch dental care services with a focus on excellence, comfort, and patient satisfaction.</p>' +
             '<div class="d-flex gap-3 mt-4 socialLinks">' +
               '<a target="_blank" href="https://www.facebook.com/Drforapatel" class="fs-5" aria-label="Facebook"><iconify-icon icon="mdi:facebook"></iconify-icon></a>' +
-              '<a href="#" class="fs-5" aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>' +
+              '<a target="_blank" href="https://www.instagram.com/perfectsmiledentalclinic_27/" class="fs-5" aria-label="Instagram"><iconify-icon icon="mdi:instagram"></iconify-icon></a>' +
             '</div>' +
           '</div>' +
           '<div class="col-lg-2 col-md-6 footer-col">' +
@@ -272,6 +322,28 @@
   } else {
     document.addEventListener('loaderDismissed', initAnimations);
   }
+
+  // ── Experience Auto-Update ──
+  function updateExperienceYears() {
+    var experience = new Date().getFullYear() - CONFIG.experienceBaseYear;
+    // Update simple number badges
+    document.querySelectorAll('.about-experience-badge .number').forEach(function (el) {
+      el.textContent = experience + '+';
+    });
+    // Update stats counters (data-target)
+    document.querySelectorAll('.stat-counter').forEach(function (el) {
+      if (el.nextElementSibling && el.nextElementSibling.textContent.toLowerCase().includes('years experience')) {
+        el.setAttribute('data-target', experience);
+      }
+    });
+    // Update text in feature list
+    document.querySelectorAll('.about-feature-item span').forEach(function (el) {
+      if (el.textContent.includes('Years Experience')) {
+        el.textContent = experience + '+ Years Experience';
+      }
+    });
+  }
+  updateExperienceYears();
 
   // ── Debounced Resize for AOS ──
   window.addEventListener('resize', debounce(function () {
