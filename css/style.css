@@ -81,6 +81,10 @@ ul,ol{list-style:none;padding:0;margin:0}
 .dropdown-item:hover,.dropdown-item:focus{background:rgba(var(--primary-rgb),.08);color:var(--primary)}
 .dropdown-toggle::after{
    border: none ;
+   margin-left: 0;
+}
+.dropdown-toggle iconify-icon{
+   margin-bottom: -3px;
 }
 .navbar-toggler{border:none;padding:.25rem;box-shadow:none!important}
 .navbar-toggler-icon{background-image:none;position:relative;width:28px;height:2px;background:var(--dark);display:inline-block;transition:var(--transition)}

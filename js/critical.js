@@ -39,7 +39,7 @@
             '<ul class="navbar-nav align-items-center">' +
               '<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>' +
               '<li class="nav-item dropdown">' +
-                '<a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>' +
+                '<a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services <iconify-icon icon="icon-park-outline:down"></iconify-icon></a>' +
                 '<ul class="dropdown-menu">' +
                   '<li><a class="dropdown-item" href="services.html">All Services</a></li>' +
                   '<li><hr class="dropdown-divider"></li>' +
@@ -75,7 +75,7 @@
               '<ul class="navbar-nav">' +
                 '<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>' +
                 '<li class="nav-item dropdown">' +
-                  '<a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>' +
+                  '<a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services <iconify-icon icon="icon-park-outline:down"></iconify-icon></a>' +
                   '<ul class="dropdown-menu">' +
                     '<li><a class="dropdown-item" href="services.html">All Services</a></li>' +
                     '<li><a class="dropdown-item" href="services.html#ceramicCrowns">Ceramic Crowns & Bridges</a></li>' +
