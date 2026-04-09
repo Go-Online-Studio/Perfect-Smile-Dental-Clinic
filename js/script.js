@@ -64,16 +64,16 @@
       id: 'dentalTreatments',
       name: 'Dental Treatments',
       category: 'treatment',
-      icon: 'mdi:tooth-cog',
-      image: 'https://placehold.co/600x400/00d2ff/ffffff?text=Dental+Treatments',
+      icon: 'streamline-ultimate:dental-crown-1',
+      image: 'images/DentalTreatments.webp',
       description: 'Comprehensive dental treatments for all your oral health needs, from routine check-ups to advanced care.'
     },
     {
       id: 'dentalImplants',
       name: 'Dental Implants',
       category: 'surgery',
-      icon: 'mdi:tooth-plus',
-      image: 'https://placehold.co/600x400/00b4d8/ffffff?text=Dental+Implants',
+      icon: 'hugeicons:dental-braces',
+      image: 'images/Dental_Implants.webp',
       description: 'Modern and durable dental implants to restore missing teeth and improve your overall dental function and aesthetics.'
     },
     {
@@ -81,7 +81,7 @@
       name: 'Preventive Dentistry',
       category: 'procedures',
       icon: 'mdi:shield-plus-outline',
-      image: 'https://placehold.co/600x400/06d6a0/ffffff?text=Preventive+Dentistry',
+      image: 'images/PreventiveDentistry.webp',
       description: 'Maintain a healthy smile with our preventive dental care services, including cleanings, exams, and protective treatments.'
     },
     {
@@ -89,7 +89,7 @@
       name: 'Braces / Aligners',
       category: 'procedures',
       icon: 'mdi:tooth-outline',
-      image: 'https://placehold.co/600x400/ef476f/ffffff?text=Braces+Aligners',
+      image: 'images/Braces_Aligners.webp',
       description: 'Expert orthodontic solutions including traditional braces and modern clear aligners to straighten your teeth and enhance your smile.'
     },
     {
@@ -97,7 +97,7 @@
       name: 'Teeth Whitening',
       category: 'procedures',
       icon: 'mdi:sparkles',
-      image: 'https://placehold.co/600x400/ffd166/ffffff?text=Teeth+Whitening',
+      image: 'images/TeethWhitening.webp',
       description: 'Professional teeth whitening treatments to brighten your smile and remove tough stains effectively and safely.'
     },
     {
@@ -105,7 +105,7 @@
       name: 'Pediatric Dentistry',
       category: 'treatment',
       icon: 'mdi:baby-face-outline',
-      image: 'https://placehold.co/600x400/118ab2/ffffff?text=Pediatric+Dentistry',
+      image: 'images/PediatricDentistry.webp',
       description: 'Gentle and friendly dental care specialized for children, ensuring a positive dental experience and healthy smiles for life.'
     }
   ];
