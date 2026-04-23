@@ -511,20 +511,4 @@
     });
   };
 
-  // ══════════════════════════════════════════════
-  // 13. TESTIMONIALS SWIPER INIT
-  // ══════════════════════════════════════════════
-  if (typeof Swiper !== 'undefined' && document.querySelector('.testimonials-swiper')) {
-    new Swiper('.testimonials-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      loop: true,
-      pagination: { el: '.testimonials-swiper .swiper-pagination', clickable: true },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-  }
-
 })();
