@@ -238,10 +238,11 @@
           '</div>' +
         '</div>' +
         '<div class="footer-bottom text-center mt-5">' +
-          '&copy; <span id="year"></span> Perfect Smile Dental Clinic. All Rights Reserved. Designed & Developed by <a href="https://shriiitrackingsolution.in/" target="_blank"><abbr title="Shriii Tracking Solution">STS</abbr></a>' +
+          '&copy; <span id="year"></span> All Rights Reserved by Perfect Smile Dental Clinic | Designed by <a href="https://shriiitrackingsolution.in/" target="_blank">Shriii&nbsp;Tracking&nbsp;Solution</a>' +
         '</div>' +
       '</div>';
   }
+
 
   // ── Dynamic Year ──
   var yearEl = document.getElementById('year');
