@@ -1,0 +1,16 @@
+# Perfect Smile Dental Clinic
+
+> Perfect Smile Dental Clinic is a premier dental care provider in Vadodara, offering a wide range of services including root canal treatments, ceramic crowns, implants, smile designing, and preventative dentistry, led by Dr. Fora Patel (BDS).
+
+Important notes:
+- Official site: https://perfectsmile-dentalclinic.com
+- Primary services/products: Root Canals, Ceramic Crowns, Implants, Braces, Teeth Whitening, Pediatric Dentistry, Wisdom Tooth Removal, Full Mouth Rehabilitation, Periodontics.
+- Primary location/service area: 410, 411, 4th Floor, Nexus Connecting Hub, Near Spring Retreat 4, White House Lane, Vasna Bhayli Main Road, Vadodara, Gujarat 390007, India.
+- Contact: +91 90548 41901 | forapatel27@gmail.com
+- Content policy: PUBLIC CONTENT ONLY
+
+## Core Pages
+- [Home](https://perfectsmile-dentalclinic.com/): Main overview.
+- [Services](https://perfectsmile-dentalclinic.com/services.html): Service/product overview.
+- [About](https://perfectsmile-dentalclinic.com/about.html): Entity, team, credentials, and trust information.
+- [Contact](https://perfectsmile-dentalclinic.com/contact.html): Official contact details.

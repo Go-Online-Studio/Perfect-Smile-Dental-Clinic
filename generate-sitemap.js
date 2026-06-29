@@ -9,7 +9,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Configuration
-const SITE_URL = 'https://go-online-studio.github.io/Perfect-Smile-Dental-Clinic';
+const SITE_URL = 'https://perfectsmile-dentalclinic.com';
 const EXCLUDE_DIRS = ['.git', 'node_modules', 'css', 'js', 'data', 'images', '.github', '.vscode'];
 const ROOT_DIR = __dirname;
 

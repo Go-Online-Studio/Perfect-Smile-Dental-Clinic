@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 
 # Prevent indexing of specific admin or temp scripts if needed
-Disallow: /css/
-Disallow: /js/
 Disallow: /images/GalleryImages1.avif
 
 Sitemap: https://perfectsmile-dentalclinic.com/sitemap.xml
